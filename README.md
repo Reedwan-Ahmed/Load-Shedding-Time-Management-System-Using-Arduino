@@ -70,7 +70,7 @@ This project is an Arduino-based load management system that automates the ON/OF
 ---
 
 ## Code
-The full Arduino code is available in the repository (`LoadsheddingCode.ino`).  
+[View the Arduino Code](./LoadsheddingCode.ino)
 It manages keypad input, relay control, LCD output, countdown logic, and state management of the loads.
 
 ---
@@ -93,8 +93,3 @@ It manages keypad input, relay control, LCD output, countdown logic, and state m
 ## Achievements
 - Awarded **highest lab mark (14/15)** for design, implementation, and documentation.  
 - Recognized as a practical and effective solution for automated load shedding.  
-
----
-
-## License
-This project is open-source and distributed under the MIT License.  
