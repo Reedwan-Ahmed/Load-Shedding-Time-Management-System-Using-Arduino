@@ -85,8 +85,9 @@ It manages keypad input, relay control, LCD output, countdown logic, and state m
 
 ## Project Photo 
  ![IMG20250914085405](https://github.com/user-attachments/assets/b59d80d9-943a-4375-99b8-2e0ee747c390)
+<img width="1136" height="664" alt="NC" src="https://github.com/user-attachments/assets/98474830-6906-4776-972f-7a78457ffcb7" />
 
-![IMG20250914105759](https://github.com/user-attachments/assets/e0a290d4-26cb-487c-92a7-9d517649cfc7)
+
 
 ---
 
