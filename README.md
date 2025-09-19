@@ -1,112 +1,125 @@
 # Load-Shedding-Time-Management-System-Using-Arduino
 Final Year Project
-This project is an Arduino-based load management system designed to automate ON/OFF control of multiple electrical loads (bulbs) based on time scheduling and manual toggle options. It aims to provide a simple, reliable, and low-cost solution for household or small-scale load shedding scenarios.
+Load Shedding Time Management System Using Arduino
 
-🔧 Features
+This project is an Arduino-based load management system that automates the ON/OFF control of multiple electrical loads based on time scheduling and manual switching. It is designed to be simple, reliable, and low-cost, with practical applications for households and small-scale power systems where load shedding is a concern.
 
-Control 3 loads (White, Blue, Yellow) via relay module
+Features
 
-4×4 Keypad interface for:
+Control of three loads (White, Blue, Yellow) through relays
 
-Manual bulb ON/OFF toggle
+4x4 Keypad interface for:
 
-Selecting bulbs for countdown control
+Manual load ON/OFF toggle
 
-Entering countdown duration in seconds
+Selecting one or more loads for countdown control
 
-16×2 I2C LCD Display for:
+Entering countdown time in seconds
 
-Real-time bulb ON/OFF status
+16x2 I2C LCD display showing:
 
-Countdown status and remaining time
+Real-time load status (ON/OFF)
 
-User prompts during selection and entry
+Countdown progress and remaining time
 
-Automatic load restoration after countdown ends
+User prompts during selection and time entry
 
-Safe switching using relays and transistor drivers
+Automatic restoration of loads after countdown ends
 
-Powered by 12 V transformer + rectifier + buck converter (stable 12 V to Arduino)
+Safe switching using relay and transistor drivers
 
-🖥️ Components Used
+Powered through transformer, rectifier, and buck converter for stable operation
+
+Components Used
 
 Arduino Uno R3
 
-3 × Relay modules (5V, 10A)
+3 × Relay Modules (5V, 10A)
 
-4×4 Matrix Keypad
+4x4 Matrix Keypad
 
-16×2 I2C LCD display
+16x2 I2C LCD Display
 
-Step-down transformer (12V AC)
+Step-down Transformer (12V AC)
 
-Bridge rectifier + Buck converter
+Bridge Rectifier
+
+Buck Converter (to regulate 14V down to 12V DC for Arduino)
 
 Bulbs (White, Blue, Yellow) as loads
 
 Supporting components: Transistors, diodes, resistors, wires, breadboards
 
-⚙️ Working Principle
+Working Principle
 
-Startup: All bulbs are ON by default, shown on the LCD.
+Initialization
 
-Manual Control:
+All loads are ON by default at startup.
 
-Keys 1, 4, 7 toggle White, Blue, Yellow bulbs respectively.
+LCD displays the status of White, Blue, and Yellow bulbs.
 
-Selection Mode:
+Manual Control
 
-Keys A, B, C select White, Blue, Yellow bulbs.
+Keys 1, 4, and 7 toggle White, Blue, and Yellow loads respectively.
 
-Multiple bulbs can be selected at once.
+Selection Mode
 
-Key * proceeds to time entry.
+Keys A, B, and C select White, Blue, and Yellow loads.
 
-Countdown Mode:
+Multiple loads can be selected simultaneously.
 
-User enters duration (seconds) via keypad.
+Key * proceeds to countdown time entry.
 
-Press D to confirm.
+Countdown Mode
 
-Selected bulbs turn OFF immediately and are restored ON when countdown finishes.
+Time is entered using numeric keys.
 
-Cancel/Reset:
+Key D confirms the entry.
 
-Key # cancels any ongoing selection or entry.
+Selected loads turn OFF immediately and automatically restore ON after the countdown finishes.
 
-📟 Circuit Overview
+Cancel and Reset
 
-AC 220 V → 12 V AC transformer → Bridge rectifier → Buck converter → 12 V regulated DC for Arduino.
+Key # cancels current selection or time entry.
 
-Relays act as isolated switches to control bulbs.
+Key C clears the chosen loads in selection mode.
 
-Keypad sends inputs to Arduino.
+Circuit Overview
 
-LCD provides real-time feedback.
+AC 220V supply is stepped down to 12V AC by a transformer.
 
-🧩 Code
+Bridge rectifier converts AC to DC (~14V).
 
-Full Arduino code is available in main.ino
-.
-It handles keypad input, relay control, LCD display, countdown timer logic, and load state tracking.
+Buck converter regulates the voltage down to a stable 12V DC for Arduino.
 
-🚀 Future Improvements
+Relays act as electronic switches to control bulbs.
 
-Add current sensor (ACS712 / INA219) to monitor load current and perform automatic load shedding on overload.
+Keypad provides user input.
 
-Add buzzer alert for overload or countdown completion.
+LCD provides real-time feedback of system state.
 
-Allow user-defined current thresholds via keypad.
+Code
 
-Add RTC module (DS3231) to schedule loads based on real-time clock.
+The full Arduino code is available in the repository (main.ino).
+It manages keypad input, relay control, LCD output, countdown logic, and state management of the loads.
 
-📸 Project Photo
+Future Improvements
+
+Integration of a current sensor (ACS712 / INA219) to detect overload conditions and perform automatic load shedding.
+
+Addition of a buzzer for alerts on overload or countdown completion.
+
+User-defined current threshold configuration via keypad.
+
+Incorporation of a Real-Time Clock (DS3231) for scheduling based on actual time of day.
+
+Project Photo
 
 
-(Arduino Uno with LCD, keypad, relay module, transformer, rectifier, buck converter, and bulbs.)
+Arduino Uno with LCD, keypad, relay module, transformer, rectifier, buck converter, and bulbs.
 
-🏆 Achievements
+Achievements
 
-Scored 14/15 (highest mark) in university lab evaluation.
+Awarded highest lab mark (14/15) for design, implementation, and documentation.
 
-Recognized for clean design, proper documentation, and practical application.
+Recognized as a practical and effective solution for automated load shedding.
